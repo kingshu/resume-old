@@ -3,7 +3,7 @@ h3 {
     font-style: normal;
     font-weight: 500;
 }
-h2 {
+h2, h4, h5 {
     font-family: 'Ubuntu' !important;
     font-style: normal;
     font-weight: 400;
