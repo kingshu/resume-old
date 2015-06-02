@@ -2,6 +2,8 @@ h3 {
     font-family: 'Ubuntu' !important;
     font-style: normal;
     font-weight: 500;
+    display: inline-block;
+    vertical-align: top;
 }
 h2, h4, h5 {
     font-family: 'Ubuntu' !important;
@@ -14,7 +16,7 @@ h2, h4, h5 {
 .mugshot {
     height:180px;
     border-radius:100px;
-    box-shadow: 0px 5px 15px 0px gray;
+    box-shadow: 0px 10px 10px -10px gray;
 }
 
 
@@ -36,6 +38,11 @@ h2, h4, h5 {
 }
 .title-row {
     margin-top: 100px;
+}
+
+.header-icon {
+    height: 50px;
+    box-shadow: 0px 10px 15px -10px gray;
 }
 
 
