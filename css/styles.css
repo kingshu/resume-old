@@ -1,12 +1,23 @@
-* {
-    font-family: 'Roboto', sans-serif;
+h3 {
+    font-family: 'Ubuntu' !important;
+    font-style: normal;
+    font-weight: 500;
 }
+h2 {
+    font-family: 'Ubuntu' !important;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
 
 .mugshot {
     height:180px;
     border-radius:100px;
     box-shadow: 0px 5px 15px 0px gray;
 }
+
+
 
 .row {
     margin-top:30px;
@@ -15,12 +26,18 @@
     padding-top: 10px;
     padding-bottom: 20px;
 }
+.row {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+}
 .innerdiv {
     padding-bottom: 20px;
 }
 .title-row {
     margin-top: 100px;
 }
+
 
 
 
