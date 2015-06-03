@@ -1,3 +1,18 @@
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+
+
 h3 {
     font-family: 'Ubuntu' !important;
     font-style: normal;
@@ -43,7 +58,6 @@ h2, h4, h5 {
 .header-icon {
     height: 50px;
 }
-
 
 
 
