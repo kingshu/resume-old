@@ -2,7 +2,7 @@ h3 {
     font-family: 'Ubuntu' !important;
     font-style: normal;
     font-weight: 500;
-    display: inline-block;
+    //display: inline-block;
     vertical-align: top;
 }
 h2, h4, h5 {
