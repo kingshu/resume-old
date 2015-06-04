@@ -105,12 +105,16 @@ h2, h4, h5 {
 .projects h4 {
     color: #673AB7;
 }
-.projects h4 > img {
+.projects h4 img {
     height: 28px;
     border-radius: 20px;
     float: right;
     box-shadow: 1px 2px 3px -1px gray;
     margin-left: 12px;
+}
+.projects h4 img:hover {
+    box-shadow: none;
+    padding: 1px 0px 0px 1px;
 }
 .projects .innerdiv {
     border-bottom: 1px solid #D1C4E9;
