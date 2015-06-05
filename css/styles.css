@@ -76,7 +76,7 @@ h2, h4, h5 {
 .history > div {
     border-left: 1px solid #DCEDC8;
 }
-.history > div > h4 {
+.history > div > h4 > a {
     color: #8BC34A;
 }
 
