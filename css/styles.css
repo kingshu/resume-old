@@ -80,6 +80,9 @@ h2, h4, h5 {
 .history > div > h4 > a {
     color: #8BC34A;
 }
+.history h5 {
+    font-style: italic;
+}
 
 
 
@@ -117,6 +120,41 @@ h2, h4, h5 {
 }
 .skills .innerdiv {
     border-bottom: 1px solid #FFE0B2;
+}
+
+
+
+
+
+.title-community {
+    color: #5D4037;
+}
+.community h4 {
+    color: #795548;
+    font-size: 17px;
+}
+.community .innerdiv {
+    padding-left: 10px;
+    padding-top: 10px;
+    border-left: 1px solid #D7CCC8;
+}
+
+
+
+
+
+
+.title-awards {
+    color: #FBC02D;
+}
+.awards h4 {
+    color: #FFC107;
+    font-size: 17px;
+}
+.awards .innerdiv {
+    padding-left: 10px;
+    padding-top: 10px;
+    border-left: 1px solid #FFE0B2;
 }
 
 
