@@ -15,11 +15,26 @@
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Custom -->
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var signs = ["-", "+"];
+        var i=0;
+        $(function(){
+            $('.jobdescription').slideUp();
+            $('.expandplus').click(function(){
+                $('.jobdescription').slideToggle();
+                $('.expandplus').html(signs[i]);
+                i = (i+1) % 2;
+                console.log(i);
+            })
+        });
+    </script>
 
 </head>
 <body>
@@ -47,29 +62,42 @@
 
         <div class="row title-row title-history text-center">
             <img src="img/history.png" alt="" class="header-icon">
-            <h3>History</h3>
+            <h3>History <div class="expandplus">+</div></h3>
         </div>
 
         <div class="row history">
             <div class="col-md-3">
                 <h4><a href="http://www.nvidia.com">Nvidia</a></h4>
-                Tegra Software Intern
+                <h5>Tegra Software Intern</h5>
+                <div class="jobdescription">
+                    Administered a continuous integration server and implemented load-balancing, version control and install/update automation. Also, created a tool to pull and view device test metrics.
+                </div>
             </div>
 
             <div class="col-md-3">
                 <h4><a href="https://www.qualcomm.com">Qualcomm</a></h4>
-                Software Engineering Intern
-            </div>
-
-            <div class="col-md-3">
-                <h4><a href="http://oil-india.com">Oil India Limited</a></h4>
-                Freelance Web Developer
+                <h5>Software Engineering Intern</h5>
+                <div class="jobdescription">
+                    Developed tools for tracking, scheduling and testing software builds with live notifications and intelligent lookups.
+                </div>
             </div>
 
             <div class="col-md-3">
                 <h4><a href="http://www.oisc.purdue.edu">Office of Indiana State Chemist</a></h4>
-                Applications Engineer
+                <h5>Applications Engineer</h5>
+                <div class="jobdescription">
+                    Developed enterprise-level production-quality web-applications and offline technologies for use on the field, in the lab and at the office by officials of state agricultural administration. Helped build a cache-and-sync system for field-use.
+                </div>
             </div>
+
+            <div class="col-md-3">
+                <h4><a href="http://oil-india.com">Oil India Limited</a></h4>
+                <h5>Freelance Web Developer</h5>
+                <div class="jobdescription">
+                    As a freelance programmer, developed an internal web-portal for Security Department facilitating intra-departmental logistics and communication.
+                </div>
+            </div>
+
         </div>
 
         <div class="row title-row title-projects text-center">
