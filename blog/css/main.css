@@ -1,0 +1,45 @@
+h1 {
+	font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 50px -30px 25px 100px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+img.titlestroke {
+	height:50px;
+}
+
+h2 {
+	font-family: 'Arimo', sans-serif;
+	font-weight: 700;
+}
+
+p {
+	font-family: 'Noto Serif', serif;
+	line-height: 180%;
+	font-size: 1.05rem;
+}
+
+small {
+	color: #ADADAD;
+}
+
+div.content {
+	width: 500px;
+	display: inline-block;
+	vertical-align: top;
+    margin: 30px 0 30px 30px;
+    border-radius: 10px;
+    padding: 5px 30px 10px 30px;
+    text-align: justify;  
+}
+
+div.content.opinion {
+    border: 1px dashed #0EBD94;
+}
+
+div.content.fact {
+    border: 1px dashed #FF9900;
+}
