@@ -1,8 +1,11 @@
+.row-fluid {
+	margin-bottom: 2%;
+}
+
 h1 {
 	font-family: 'Lora', serif;
-    font-size: 3rem;
     font-weight: 700;
-    margin: 50px -30px 25px 80px;
+    margin: 50px -30px 25px 0px;
     display: inline-block;
     vertical-align: bottom;
     color: #D21835;
@@ -15,12 +18,15 @@ img.titlestroke {
 h2 {
 	font-family: 'Arimo', sans-serif;
 	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 p {
 	font-family: 'Noto Serif', serif;
 	line-height: 180%;
 	font-size: 1.05rem;
+	text-align: justify; 
+	margin-top: 20px;
 }
 
 small {
@@ -30,38 +36,18 @@ small {
 	padding: 5px 15px;
 }
 
-
-
 div.content.opinion {
-	width: 800px;
     border: 1px dashed #0EBD94;
 }
 
 div.content.fact {
-	width: 800px;
     border: 1px dashed #FF9900;	
 }
 
-@media screen and (min-width: 1800px) {
-    div.container {
-    	width: 75%;
-		margin: 0 auto;
-	}
-
-	div.content.fact {
-		width: 400px;
-	    border: 1px dashed #FF9900;
-	}
-}
-
-
 div.content {
-	display: inline-block;
-	vertical-align: top;
-    margin: 30px 0 30px 30px;
-    border-radius: 10px;
-    padding: 5px 30px 10px 30px;
-    text-align: justify;  
+	border-radius: 10px;
+    padding: 5px 30px 10px 30px; 
+    margin-bottom: 2%
 }
 
 
