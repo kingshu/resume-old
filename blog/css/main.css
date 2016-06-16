@@ -1,11 +1,12 @@
-.row-fluid {
+.row {
 	margin-bottom: 2%;
 }
 
-h1 {
+h2 {
 	font-family: 'Lora', serif;
     font-weight: 700;
-    margin: 50px -30px 25px 0px;
+    font-size: 4rem;
+    margin: 50px -30px 25px 40px;
     display: inline-block;
     vertical-align: bottom;
     color: #D21835;
@@ -15,7 +16,7 @@ img.titlestroke {
 	height:50px;
 }
 
-h2 {
+h3 {
 	font-family: 'Arimo', sans-serif;
 	font-weight: 700;
 	margin-bottom: 20px;
