@@ -1,0 +1,96 @@
+<!doctype html>
+<html>  
+<head>
+<style type="text/css">
+    body {
+        font-family: Arial;
+        font-size: 1.8rem;
+    }
+
+    div.container {
+        margin: 50px 0 0 50px;
+    }
+
+    div.timer {
+        width: 60px;
+        display: inline-block;
+        margin-left: 10px;
+        text-align: right;
+    }
+
+    div#secs {
+        width: 120px;
+    }
+
+    div#clock {
+        display: inline-block;
+        padding: 20px;
+        margin-top:50px;
+        border-radius: 20px;
+        box-shadow: 8px 10px 25px 5px gray;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        Time until I see Erin:<br>
+        <div id="clock">
+            <div class="timer" id="days"></div> days,
+            <div class="timer" id="hours"></div> hours,
+            <div class="timer" id="minutes"></div> minutes, 
+            <div class="timer" id="secs">
+                <span id="seconds"></span>.<span id="subseconds"></span>
+            </div> seconds
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var deadline = (new Date(1470369540000)).getTime();
+        var now = (new Date).getTime();
+        var milliseconds = deadline-now;
+
+        var span_days = document.getElementById("days");
+        var span_hours = document.getElementById("hours");
+        var span_minutes = document.getElementById("minutes");
+        var span_seconds = document.getElementById("seconds");
+        var span_subseconds = document.getElementById("subseconds");
+
+        var ms = milliseconds%100;
+        var seconds = Math.floor( (milliseconds/1000) % 60 );
+        var minutes = Math.floor( (milliseconds/1000/60) % 60 );
+        var hours = Math.floor( (milliseconds/(1000*60*60)) % 24 );
+        var days = Math.floor( milliseconds/(1000*60*60*24) );
+        
+        span_days.innerHTML = days;
+        span_hours.innerHTML = hours;
+        span_minutes.innerHTML = minutes;
+        span_seconds.innerHTML = seconds;
+        span_subseconds.innerHTML = subseconds;
+
+        setInterval(function(){
+            ms--
+            if (ms==-1) {
+                ms = 99;
+                seconds--
+                if (seconds==-1) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes==-1) {
+                        minutes = 59;
+                        hours--;
+                        if (hours==-1) {
+                            hours = 23;
+                            days--;
+                            span_days.innerHTML = days;
+                        }
+                        span_hours.innerHTML = hours;
+                    }
+                    span_minutes.innerHTML = minutes;
+                }
+                span_seconds.innerHTML = seconds;
+            }
+            span_subseconds.innerHTML = ms;
+        },10);
+    </script>
+</body>
+</html>
