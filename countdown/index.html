@@ -55,7 +55,7 @@
         var span_seconds = document.getElementById("seconds");
         var span_subseconds = document.getElementById("subseconds");
 
-        var ms = milliseconds%100;
+        var ms = milliseconds%10;
         var seconds = Math.floor( (milliseconds/1000) % 60 );
         var minutes = Math.floor( (milliseconds/1000/60) % 60 );
         var hours = Math.floor( (milliseconds/(1000*60*60)) % 24 );
@@ -70,7 +70,7 @@
         setInterval(function(){
             ms--
             if (ms==-1) {
-                ms = 99;
+                ms = 9;
                 seconds--
                 if (seconds==-1) {
                     seconds = 59;
@@ -90,7 +90,7 @@
                 span_seconds.innerHTML = seconds;
             }
             span_subseconds.innerHTML = ms;
-        },10);
+        },100);
     </script>
 </body>
 </html>
