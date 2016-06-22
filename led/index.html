@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LED Controls</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="jscolor.min.js"></script>
+	<script>
+		rgbToHex = function(r,g,b){
+		    var bin = r << 16 | g << 8 | b;
+		    return (function(h){
+		        return new Array(7-h.length).join("0")+h
+		    })(bin.toString(16).toUpperCase())
+		}
+		function hexToRgb(hex) {
+		    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+		    return result ? {
+		        r: parseInt(result[1], 16),
+		        g: parseInt(result[2], 16),
+		        b: parseInt(result[3], 16)
+		    } : null;
+		}
+		var URL = "http://10.0.0.174:8080/";
+		var GETSTATE = "getstate/";
+		var SETSTATE = "setstate/";
+		var ON = "turnon/";
+		var OFF = "turnoff/"
+		$(document).ready(function(){
+			$.getJSON(URL+GETSTATE, function(data){
+				$("#toggle").attr("power", data.power);
+				console.log(rgbToHex(data.red, data.green, data.blue));
+				$("#colorset").val(rgbToHex(data.red, data.green, data.blue));
+			});
+			$("#toggle").click(function(){
+				if ($(this).attr("power")=="off") {
+					$.getJSON(URL+ON, function(data){
+						$("#toggle").attr("power", "on");
+						$("#colorset").val(rgbToHex(data.red, data.green, data.blue));
+					});
+				}
+				else if ($(this).attr("power")=="on") {
+					$.getJSON(URL+OFF, function(data){
+						$("#toggle").attr("power", "off");
+						console.log(rgbToHex(data.red, data.green, data.blue));
+						$("#colorset").val(rgbToHex(data.red, data.green, data.blue));
+					});	
+				}
+			});
+			$("#colorset").change(function(){
+				var newcolor = hexToRgb('#'+$("#colorset").val());
+				console.log(newcolor);
+				var COLOR = newcolor.r+"/"+newcolor.g+"/"+newcolor.b;
+				$.getJSON(URL+SETSTATE+COLOR, function(data){});
+			})
+		});
+	</script>
+</head>
+<body>
+	<button id='toggle' power="off">Power</button><br><br><br>
+	<input id="colorset" class="jscolor">
+</body>
+</html>
