@@ -1,0 +1,14 @@
+body {
+	 padding-top: 50px;
+	 zoom: 3; -moz-transform: scale(3); -moz-transform-origin: 0 0;
+	 font-family: "Arial";
+	 color: gray;
+	 text-align: center;
+}
+
+.colorpicker {
+	border-radius: 5px;
+	padding: 5px;
+	width: 50px;
+	text-align: center;
+}

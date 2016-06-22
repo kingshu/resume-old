@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>LED Controls</title>
+	<link rel="stylesheet" href="switch.css">
+	<link rel="stylesheet" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="jscolor.min.js"></script>
 	<script>
@@ -56,7 +58,13 @@
 	</script>
 </head>
 <body>
-	<button id='toggle' power="off">Power</button><br><br><br>
-	<input id="colorset" class="jscolor">
+
+	<span class="toggle">
+	    <input type="checkbox" id='toggle' power="off">
+	    <label data-off="Off" data-on="On"></label>
+	</span>
+	<br><br><br>
+	Color: <input id="colorset" class="jscolor colorpicker">
+	<label for="cb1" class="tgl-btn"></label>
 </body>
 </html>
